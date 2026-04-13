@@ -461,3 +461,28 @@ if (prototypeSlider && prototypeTrack && prototypeDots.length > 0) {
 
   syncPrototypeSlider(0);
 }
+
+// ============================================
+// ACCORDION FUNCTIONALITY
+// ============================================
+const accordionItems = document.querySelectorAll(".accordion-item");
+
+if (accordionItems.length > 0) {
+  accordionItems.forEach((item) => {
+    const trigger = item.querySelector(".accordion-trigger");
+    
+    if (trigger) {
+      trigger.addEventListener("click", () => {
+        const isExpanded = item.dataset.expanded === "true";
+        
+        // Close all other items
+        accordionItems.forEach((otherItem) => {
+          otherItem.dataset.expanded = "false";
+        });
+        
+        // Toggle current item
+        item.dataset.expanded = isExpanded ? "false" : "true";
+      });
+    }
+  });
+}

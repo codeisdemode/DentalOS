@@ -45,7 +45,7 @@
       </header>
 
       <main class="hero-shell">
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION (PRESERVED) -->
         <section class="hero-card">
           <div class="hero-art" aria-hidden="true"></div>
 
@@ -109,350 +109,273 @@
           </div>
         </section>
 
-        <!-- STATS SECTION -->
-        <section class="stats-section" id="stats">
-          <div class="stats-shell">
-            <div class="stats-grid" data-appear>
-              <div class="stat-card">
-                <div class="stat-value">98%</div>
-                <div class="stat-label">Claim acceptance rate</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">40%</div>
-                <div class="stat-label">Reduction in admin time</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">&lt; 1 day</div>
-                <div class="stat-label">Average onboarding time</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">0%</div>
-                <div class="stat-label">Missed calls with AI</div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <!-- ============================================
+             PREMIUM SECTIONS START HERE
+             ============================================ -->
 
-        <!-- AUTONOMOUS WORKFLOWS - BENTO GRID -->
-        <section class="bento-section" id="product" aria-labelledby="bento-title">
-          <div class="bento-section__art" aria-hidden="true"></div>
-          <div class="bento-section__dots" aria-hidden="true"></div>
-
-          <div class="bento-shell">
-            <div class="bento-header" data-appear>
-              <div class="eyebrow-pill eyebrow-pill--center">
-                <span class="eyebrow-pill__icon" aria-hidden="true"></span>
-                <span>Autonomous Workflows</span>
-              </div>
-
-              <h2 class="bento-title" id="bento-title">
-                Work continues.<br />Even when no one is touching the system.
+        <!-- CONNECTOR PANEL SECTION - Animated Flow Lines -->
+        <section class="connector-section" id="product">
+          <div class="connector-section__border-left" aria-hidden="true"></div>
+          <div class="connector-section__border-right" aria-hidden="true"></div>
+          
+          <div class="connector-shell">
+            <div class="connector-header" data-appear>
+              <h2 class="connector-title">
+                Work continues.<br/>
+                <span class="text-muted">Even when no one is touching the system.</span>
               </h2>
-
-              <p class="bento-description">
+              <p class="connector-description">
                 DentalOS is not a software layer. It is the runtime in which your practice operates.
                 It decides, executes, monitors, and learns - within your rules.
               </p>
             </div>
 
-            <div class="bento-grid" data-appear>
-              <!-- Large Card - Schedule Filling -->
-              <article class="bento-card bento-card--large">
-                <div class="bento-card__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                    <path d="M8 14h.01"></path>
-                    <path d="M12 14h.01"></path>
-                    <path d="M16 14h.01"></path>
-                    <path d="M8 18h.01"></path>
-                    <path d="M12 18h.01"></path>
-                  </svg>
-                </div>
-                <h3 class="bento-card__title">Open slots filled automatically</h3>
-                <p class="bento-card__body">
-                  Empty chair time gets routed into bookable capacity. Waitlist patients are matched to cancellations instantly.
-                </p>
-                <div class="bento-card__visual bento-visual--calendar">
-                  <div class="calendar-demo">
-                    <div class="calendar-slot calendar-slot--filled">09:00 - Cleaning</div>
-                    <div class="calendar-slot calendar-slot--auto">
-                      <span class="slot-badge">Auto-filled</span>
-                      10:30 - Checkup
-                    </div>
-                    <div class="calendar-slot calendar-slot--filled">12:00 - Crown</div>
-                    <div class="calendar-slot calendar-slot--auto">
-                      <span class="slot-badge">From waitlist</span>
-                      14:00 - Filling
-                    </div>
-                  </div>
-                </div>
-              </article>
+            <!-- Animated Flow Panel -->
+            <div class="connector-panel" data-appear>
+              <div class="connector-panel__visual">
+                <!-- SVG Animated Flow Lines -->
+                <svg class="flow-svg" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Static base paths -->
+                  <path d="M0 50H200C240 50 260 100 300 100H500C540 100 560 200 600 200H800" stroke="currentColor" stroke-opacity="0.08"/>
+                  <path d="M0 200H150C190 200 210 120 250 120H550C590 120 610 280 650 280H800" stroke="currentColor" stroke-opacity="0.08"/>
+                  <path d="M0 350H250C290 350 310 200 350 200H450C490 200 510 300 550 300H800" stroke="currentColor" stroke-opacity="0.08"/>
+                  <path d="M100 0V100C100 140 150 160 150 200V400" stroke="currentColor" stroke-opacity="0.08"/>
+                  <path d="M400 0V80C400 120 350 140 350 180C350 220 400 240 400 280V400" stroke="currentColor" stroke-opacity="0.08"/>
+                  <path d="M700 0V150C700 190 650 210 650 250V400" stroke="currentColor" stroke-opacity="0.08"/>
+                  
+                  <!-- Animated flowing paths -->
+                  <path d="M0 50H200C240 50 260 100 300 100H500C540 100 560 200 600 200H800" 
+                        stroke="url(#flowGradient1)" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-dasharray="60 540" 
+                        class="flow-path flow-path--1"/>
+                  <path d="M0 200H150C190 200 210 120 250 120H550C590 120 610 280 650 280H800" 
+                        stroke="url(#flowGradient2)" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-dasharray="50 500" 
+                        class="flow-path flow-path--2"/>
+                  <path d="M0 350H250C290 350 310 200 350 200H450C490 200 510 300 550 300H800" 
+                        stroke="url(#flowGradient1)" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-dasharray="40 480" 
+                        class="flow-path flow-path--3"/>
+                  
+                  <defs>
+                    <linearGradient id="flowGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#378add" stop-opacity="0"/>
+                      <stop offset="50%" stop-color="#378add" stop-opacity="1"/>
+                      <stop offset="100%" stop-color="#378add" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="flowGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#0d9488" stop-opacity="0"/>
+                      <stop offset="50%" stop-color="#0d9488" stop-opacity="0.8"/>
+                      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
 
-              <!-- Small Card - Recalls -->
-              <article class="bento-card bento-card--small">
-                <div class="bento-card__icon bento-card__icon--teal">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                  </svg>
+                <!-- Floating Stat Nodes -->
+                <div class="flow-node flow-node--1">
+                  <div class="flow-node__value">98%</div>
+                  <div class="flow-node__label">Claim acceptance</div>
                 </div>
-                <h3 class="bento-card__title">Recalls scheduled and sent</h3>
-                <p class="bento-card__body">Periodic follow-ups are planned without front-desk effort.</p>
-              </article>
-
-              <!-- Small Card - Rules -->
-              <article class="bento-card bento-card--small">
-                <div class="bento-card__icon bento-card__icon--amber">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 20h9"></path>
-                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                  </svg>
+                <div class="flow-node flow-node--2">
+                  <div class="flow-node__value">40%</div>
+                  <div class="flow-node__label">Less admin time</div>
                 </div>
-                <h3 class="bento-card__title">Appointment rules applied</h3>
-                <p class="bento-card__body">Treatment type, duration, and timing stay consistent by workflow.</p>
-              </article>
-
-              <!-- Medium Card - Live Feed -->
-              <article class="bento-card bento-card--medium">
-                <div class="bento-card__header">
-                  <div class="bento-card__icon bento-card__icon--live">
-                    <span class="live-dot"></span>
-                  </div>
-                  <span class="bento-card__label">Live feed</span>
+                <div class="flow-node flow-node--3">
+                  <div class="flow-node__value">&lt;1 day</div>
+                  <div class="flow-node__label">Onboarding</div>
                 </div>
-                <h3 class="bento-card__title">Today in your practice</h3>
-                <div class="live-feed">
-                  <div class="feed-item">
-                    <span class="feed-time">11:43</span>
-                    <div class="feed-content">
-                      <strong>Claim batch submitted</strong>
-                      <span>14 claims - 2 exceptions flagged</span>
-                    </div>
-                    <span class="feed-status feed-status--done">Executed</span>
-                  </div>
-                  <div class="feed-item">
-                    <span class="feed-time">09:02</span>
-                    <div class="feed-content">
-                      <strong>Morning schedule locked</strong>
-                      <span>6 appointments confirmed</span>
-                    </div>
-                    <span class="feed-status feed-status--done">Executed</span>
-                  </div>
-                  <div class="feed-item">
-                    <span class="feed-time">08:15</span>
-                    <div class="feed-content">
-                      <strong>No-show follow-up sent</strong>
-                      <span>Rebooking link opened</span>
-                    </div>
-                    <span class="feed-status feed-status--pending">Scheduled</span>
-                  </div>
+                <div class="flow-node flow-node--4">
+                  <div class="flow-node__value">0</div>
+                  <div class="flow-node__label">Missed calls</div>
                 </div>
-              </article>
-
-              <!-- Wide Card - Waitlist -->
-              <article class="bento-card bento-card--wide">
-                <div class="bento-card__icon bento-card__icon--violet">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <h3 class="bento-card__title">Waitlist patients routed into cancellations</h3>
-                <p class="bento-card__body">
-                  Openings are offered automatically to the first matching patient. 
-                  No manual calls. No spreadsheet tracking.
-                </p>
-                <div class="waitlist-visual">
-                  <div class="waitlist-item">
-                    <div class="waitlist-avatar">JK</div>
-                    <div class="waitlist-info">
-                      <strong>James K.</strong>
-                      <span>Waiting for filling slot</span>
-                    </div>
-                    <div class="waitlist-action">Offered slot</div>
-                  </div>
-                  <div class="waitlist-item waitlist-item--matched">
-                    <div class="waitlist-avatar">SM</div>
-                    <div class="waitlist-info">
-                      <strong>Sarah M.</strong>
-                      <span>Crown appointment</span>
-                    </div>
-                    <div class="waitlist-action waitlist-action--success">Confirmed</div>
-                  </div>
-                </div>
-              </article>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- PRACTICE ALIGNMENT SECTION -->
-        <section class="alignment-section" id="solutions" aria-labelledby="alignment-title">
-          <div class="alignment-art" aria-hidden="true"></div>
+        <!-- CAPABILITIES ACCORDION SECTION -->
+        <section class="capabilities-section" id="solutions">
+          <div class="capabilities-border-x" aria-hidden="true"></div>
           
-          <div class="alignment-shell">
-            <div class="alignment-content" data-appear>
-              <div class="alignment-copy">
-                <div class="eyebrow-pill">
-                  <span class="eyebrow-pill__icon" aria-hidden="true"></span>
-                  <span>Practice alignment</span>
-                </div>
-
-                <h2 class="alignment-title" id="alignment-title">
-                  Everything stays aligned - without coordination
-                </h2>
-
-                <p class="alignment-description">
-                  Whether you run one room or ten, DentalOS keeps patients, notes, tasks, 
-                  and scheduling aligned as one shared system.
-                </p>
-
-                <ul class="alignment-list">
-                  <li>Patient records stay up to date</li>
-                  <li>Notes and tasks stay linked to the file</li>
-                  <li>Agenda and dossier update in real time</li>
-                  <li>Teams work from one shared operational state</li>
-                </ul>
-
-                <div class="alignment-tagline">
-                  No checking. No chasing. No manual fixes.
-                </div>
-              </div>
-
-              <div class="alignment-visual">
-                <div class="sync-animation">
-                  <div class="sync-hub">
-                    <span>DentalOS</span>
-                  </div>
-                  <div class="sync-node sync-node--1">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                    <span>Patients</span>
-                  </div>
-                  <div class="sync-node sync-node--2">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                    <span>Schedule</span>
-                  </div>
-                  <div class="sync-node sync-node--3">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-                    <span>Documents</span>
-                  </div>
-                  <div class="sync-node sync-node--4">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                    <span>Billing</span>
-                  </div>
-                  <div class="sync-line sync-line--1"></div>
-                  <div class="sync-line sync-line--2"></div>
-                  <div class="sync-line sync-line--3"></div>
-                  <div class="sync-line sync-line--4"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- PATIENT EXPERIENCE SECTION -->
-        <section class="patient-section" id="patient-experience" aria-labelledby="patient-title">
-          <div class="patient-shell">
-            <div class="patient-header" data-appear>
-              <div class="eyebrow-pill eyebrow-pill--center">
-                <span class="eyebrow-pill__icon" aria-hidden="true"></span>
-                <span>Patient experience</span>
-              </div>
-
-              <h2 class="patient-title" id="patient-title">
-                Patients book, prepare, and respond<br />without calling the front desk
-              </h2>
-
-              <p class="patient-description">
-                From online booking to intake and reminders, DentalOS keeps the patient journey 
-                moving before your team ever has to intervene.
+          <div class="capabilities-shell">
+            <div class="capabilities-header" data-appear>
+              <span class="section-label">Capabilities</span>
+              <h2 class="capabilities-title">Built for every stage of practice growth</h2>
+              <p class="capabilities-description">
+                From solo practitioners to multi-location groups, DentalOS scales with you.
               </p>
             </div>
 
-            <div class="patient-grid" data-appear>
-              <article class="patient-card">
-                <div class="patient-card__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                  </svg>
+            <div class="capabilities-accordion" data-appear>
+              <!-- Accordion Item 1 -->
+              <div class="accordion-item" data-expanded="true">
+                <button class="accordion-trigger">
+                  <span class="accordion-number">01</span>
+                  <h3 class="accordion-heading">Autonomous Scheduling</h3>
+                  <div class="accordion-indicator">
+                    <span class="accordion-dot"></span>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <div class="accordion-grid">
+                    <div class="accordion-copy">
+                      <p>Empty chair time gets routed into bookable capacity. Waitlist patients are matched to cancellations instantly. Recalls are scheduled and sent without front-desk effort.</p>
+                      <a class="accordion-cta" href="#demo">
+                        <span>See scheduling in action</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </a>
+                    </div>
+                    <div class="accordion-visual">
+                      <div class="schedule-demo">
+                        <div class="schedule-row schedule-row--filled">
+                          <span class="schedule-time">09:00</span>
+                          <span class="schedule-type">Cleaning</span>
+                          <span class="schedule-status schedule-status--confirmed">Confirmed</span>
+                        </div>
+                        <div class="schedule-row schedule-row--auto">
+                          <span class="schedule-time">10:30</span>
+                          <span class="schedule-type">Checkup</span>
+                          <span class="schedule-status schedule-status--auto">Auto-filled</span>
+                        </div>
+                        <div class="schedule-row schedule-row--filled">
+                          <span class="schedule-time">12:00</span>
+                          <span class="schedule-type">Crown fitting</span>
+                          <span class="schedule-status schedule-status--confirmed">Confirmed</span>
+                        </div>
+                        <div class="schedule-row schedule-row--waitlist">
+                          <span class="schedule-time">14:00</span>
+                          <span class="schedule-type">Filling</span>
+                          <span class="schedule-status schedule-status--waitlist">From waitlist</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3>Online booking</h3>
-                <p>Patients can book available appointments without calling the practice.</p>
-              </article>
-
-              <article class="patient-card">
-                <div class="patient-card__icon patient-card__icon--teal">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                  </svg>
-                </div>
-                <h3>Digital intake before the visit</h3>
-                <p>Forms and medical questions are completed before arrival.</p>
-              </article>
-
-              <article class="patient-card">
-                <div class="patient-card__icon patient-card__icon--green">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <h3>WhatsApp reminders and updates</h3>
-                <p>Reminders, confirmations, and follow-ups are delivered automatically.</p>
-              </article>
-
-              <article class="patient-card">
-                <div class="patient-card__icon patient-card__icon--amber">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"></path>
-                    <polyline points="7 7 12 12 17 7"></polyline>
-                  </svg>
-                </div>
-                <h3>AI summaries of incoming calls</h3>
-                <p>Phone conversations are captured as usable operational context.</p>
-              </article>
-            </div>
-
-            <!-- Before the Visit Timeline -->
-            <div class="journey-timeline" data-appear>
-              <div class="journey-header">
-                <h3>Before the visit</h3>
-                <p>What happens automatically before a patient arrives</p>
               </div>
-              <div class="journey-steps">
-                <div class="journey-step">
-                  <div class="journey-step__marker">1</div>
-                  <div class="journey-step__content">
-                    <strong>Booking confirmed instantly</strong>
+
+              <!-- Accordion Item 2 -->
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  <span class="accordion-number">02</span>
+                  <h3 class="accordion-heading">Clinical Intelligence</h3>
+                  <div class="accordion-indicator">
+                    <span class="accordion-dot"></span>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <div class="accordion-grid">
+                    <div class="accordion-copy">
+                      <p>Talk to your patient. DentalOS listens, understands, and turns everything into structured output instantly. Clinical notes generated in real time, actions detected as you speak, referral letters drafted automatically.</p>
+                      <a class="accordion-cta" href="#demo">
+                        <span>Explore clinical features</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </a>
+                    </div>
+                    <div class="accordion-visual">
+                      <div class="clinical-demo">
+                        <div class="clinical-demo__speech">
+                          <div class="speech-waves">
+                            <span></span><span></span><span></span><span></span><span></span>
+                          </div>
+                          <p>"There's early decay on the lower right molar - let's book a filling in about three weeks."</p>
+                        </div>
+                        <div class="clinical-demo__action">
+                          <div class="action-icon-wrapper">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
+                          </div>
+                          <div class="action-text">
+                            <strong>Schedule appointment detected</strong>
+                            <span>Filling - Lower right molar - 20 min</span>
+                          </div>
+                          <span class="action-check"></span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="journey-connector"></div>
-                <div class="journey-step">
-                  <div class="journey-step__marker">2</div>
-                  <div class="journey-step__content">
-                    <strong>Pre-visit intake sent</strong>
+              </div>
+
+              <!-- Accordion Item 3 -->
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  <span class="accordion-number">03</span>
+                  <h3 class="accordion-heading">Patient Experience</h3>
+                  <div class="accordion-indicator">
+                    <span class="accordion-dot"></span>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <div class="accordion-grid">
+                    <div class="accordion-copy">
+                      <p>Patients book, prepare, and respond without calling the front desk. Online booking, digital intake before visits, WhatsApp reminders, and AI summaries of incoming calls - all automated.</p>
+                      <a class="accordion-cta" href="#demo">
+                        <span>See patient journey</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </a>
+                    </div>
+                    <div class="accordion-visual">
+                      <div class="journey-demo">
+                        <div class="journey-step-new">
+                          <span class="journey-marker">1</span>
+                          <span class="journey-label">Booking confirmed</span>
+                        </div>
+                        <div class="journey-line"></div>
+                        <div class="journey-step-new">
+                          <span class="journey-marker">2</span>
+                          <span class="journey-label">Intake sent</span>
+                        </div>
+                        <div class="journey-line"></div>
+                        <div class="journey-step-new journey-step-new--active">
+                          <span class="journey-marker">3</span>
+                          <span class="journey-label">Reminder delivered</span>
+                        </div>
+                        <div class="journey-line"></div>
+                        <div class="journey-step-new">
+                          <span class="journey-marker">4</span>
+                          <span class="journey-label">Ready for visit</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="journey-connector"></div>
-                <div class="journey-step">
-                  <div class="journey-step__marker">3</div>
-                  <div class="journey-step__content">
-                    <strong>Reminder delivered automatically</strong>
+              </div>
+
+              <!-- Accordion Item 4 -->
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  <span class="accordion-number">04</span>
+                  <h3 class="accordion-heading">Billing & Claims</h3>
+                  <div class="accordion-indicator">
+                    <span class="accordion-dot"></span>
                   </div>
-                </div>
-                <div class="journey-connector"></div>
-                <div class="journey-step">
-                  <div class="journey-step__marker">4</div>
-                  <div class="journey-step__content">
-                    <strong>Call summary attached to the file</strong>
+                </button>
+                <div class="accordion-content">
+                  <div class="accordion-grid">
+                    <div class="accordion-copy">
+                      <p>Claims processed automatically, invoices sent on time, and outstanding payments chased without manual intervention. Insurance declarations flow directly to VECOZO, accounting syncs with Twinfield.</p>
+                      <a class="accordion-cta" href="#demo">
+                        <span>Learn about billing</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </a>
+                    </div>
+                    <div class="accordion-visual">
+                      <div class="billing-demo">
+                        <div class="billing-stat">
+                          <span class="billing-stat__value">98%</span>
+                          <span class="billing-stat__label">First-pass acceptance</span>
+                        </div>
+                        <div class="billing-stat">
+                          <span class="billing-stat__value">+22%</span>
+                          <span class="billing-stat__label">Revenue increase</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -460,87 +383,71 @@
           </div>
         </section>
 
-        <!-- CLINICAL INTELLIGENCE SECTION -->
-        <section class="clinical-new-section" id="clinical" aria-labelledby="clinical-new-title">
-          <div class="clinical-new-art" aria-hidden="true"></div>
-          <div class="clinical-new-shell">
-            <div class="clinical-new-layout" data-appear>
-              <div class="clinical-new-copy">
-                <div class="eyebrow-pill">
-                  <span class="clinical-eyebrow__emoji" aria-hidden="true">&#129504;</span>
-                  <span>Clinical Intelligence</span>
-                </div>
-
-                <h2 class="clinical-new-title" id="clinical-new-title">
-                  Every conversation becomes structured work
-                </h2>
-
-                <p class="clinical-new-description">
-                  Talk to your patient. DentalOS listens, understands, and turns everything into 
-                  structured output instantly. No typing. No afterwork. No lost details.
+        <!-- LIVE FEED SECTION - Premium Scrolling Feed -->
+        <section class="livefeed-section">
+          <div class="livefeed-shell">
+            <div class="livefeed-layout" data-appear>
+              <div class="livefeed-copy">
+                <span class="section-label">Live Operations</span>
+                <h2 class="livefeed-title">Today in your practice</h2>
+                <p class="livefeed-description">
+                  Real-time visibility into every autonomous action. 
+                  Watch work happen without touching a thing.
                 </p>
-
-                <ul class="clinical-features">
-                  <li>Conversations captured automatically</li>
-                  <li>Clinical notes generated in real time</li>
-                  <li>Actions detected as you speak</li>
-                  <li>Referral letters drafted automatically</li>
-                  <li>Treatment plans suggested from the consult</li>
-                </ul>
-
-                <div class="clinical-badges">
-                  <span class="clinical-badge clinical-badge--secure">
-                    <span class="badge-dot badge-dot--green"></span>
-                    100% privacy-safe
-                  </span>
-                  <span class="clinical-badge">
-                    <span class="badge-dot badge-dot--red"></span>
-                    Live recording
-                  </span>
-                  <span class="clinical-badge">GDPR compliant</span>
+                <div class="livefeed-legend">
+                  <div class="legend-item">
+                    <span class="legend-dot legend-dot--executed"></span>
+                    <span>Executed</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-dot legend-dot--scheduled"></span>
+                    <span>Scheduled</span>
+                  </div>
                 </div>
               </div>
-
-              <div class="clinical-new-visual">
-                <div class="consult-card">
-                  <div class="consult-card__header">
-                    <div class="patient-info">
-                      <div class="patient-avatar">JD</div>
-                      <div class="patient-details">
-                        <strong>Jan de Vries</strong>
-                        <span>DOB 12-03-1985</span>
-                      </div>
+              
+              <div class="livefeed-panel">
+                <div class="livefeed-mask"></div>
+                <div class="livefeed-scroll">
+                  <div class="feed-entry">
+                    <span class="feed-entry__time">11:43</span>
+                    <div class="feed-entry__content">
+                      <strong>Claim batch submitted</strong>
+                      <span>14 claims - 2 exceptions flagged</span>
                     </div>
-                    <span class="consult-date">05-04-2026</span>
+                    <span class="feed-entry__status feed-entry__status--executed">Executed</span>
                   </div>
-                  
-                  <div class="consult-speech">
-                    <div class="speech-indicator">
-                      <span class="speech-wave"></span>
-                      <span class="speech-wave"></span>
-                      <span class="speech-wave"></span>
+                  <div class="feed-entry">
+                    <span class="feed-entry__time">09:02</span>
+                    <div class="feed-entry__content">
+                      <strong>Morning schedule locked</strong>
+                      <span>6 appointments confirmed automatically</span>
                     </div>
-                    <p>"There's early decay on the lower right molar - let's book a filling in about three weeks."</p>
+                    <span class="feed-entry__status feed-entry__status--executed">Executed</span>
                   </div>
-
-                  <div class="detected-actions">
-                    <div class="actions-label">Detected actions</div>
-                    <div class="action-item">
-                      <span class="action-icon">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
-                      </span>
-                      <div class="action-content">
-                        <strong>Schedule appointment</strong>
-                        <span>Filling - Lower right molar - 20 min</span>
-                      </div>
-                      <span class="action-status"></span>
+                  <div class="feed-entry">
+                    <span class="feed-entry__time">08:41</span>
+                    <div class="feed-entry__content">
+                      <strong>Post-visit forms queued</strong>
+                      <span>3 forms - 1 treatment note pending</span>
                     </div>
+                    <span class="feed-entry__status feed-entry__status--scheduled">Scheduled</span>
                   </div>
-
-                  <div class="consult-tags">
-                    <span class="tag tag--blue">Filling</span>
-                    <span class="tag tag--amber">Caries</span>
-                    <span class="tag tag--gray">Crown</span>
+                  <div class="feed-entry">
+                    <span class="feed-entry__time">08:15</span>
+                    <div class="feed-entry__content">
+                      <strong>No-show follow-up sent</strong>
+                      <span>Rebooking link opened by patient</span>
+                    </div>
+                    <span class="feed-entry__status feed-entry__status--executed">Executed</span>
+                  </div>
+                  <div class="feed-entry">
+                    <span class="feed-entry__time">07:58</span>
+                    <div class="feed-entry__content">
+                      <strong>Overnight recall digest ready</strong>
+                      <span>11 tasks resolved - 0 exceptions</span>
+                    </div>
+                    <span class="feed-entry__status feed-entry__status--executed">Executed</span>
                   </div>
                 </div>
               </div>
@@ -548,80 +455,156 @@
           </div>
         </section>
 
-        <!-- INTEGRATIONS SECTION -->
-        <section class="integrations-section" id="integrations" aria-labelledby="integrations-title">
-          <div class="integrations-shell">
-            <div class="integrations-header" data-appear>
-              <div class="eyebrow-pill eyebrow-pill--center">
-                <span class="eyebrow-pill__icon" aria-hidden="true"></span>
-                <span>Integrations</span>
+        <!-- ALIGNMENT SECTION - Central Hub Visual -->
+        <section class="alignment-new-section">
+          <div class="alignment-new-shell">
+            <div class="alignment-new-content" data-appear>
+              <div class="alignment-new-header">
+                <span class="section-label">Practice Alignment</span>
+                <h2 class="alignment-new-title">Everything stays aligned - without coordination</h2>
+                <p class="alignment-new-description">
+                  Whether you run one room or ten, DentalOS keeps patients, notes, tasks, 
+                  and scheduling aligned as one shared system.
+                </p>
               </div>
 
-              <h2 class="integrations-title" id="integrations-title">
-                Works with the systems you already use
-              </h2>
+              <div class="alignment-hub-visual">
+                <svg class="hub-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Orbital rings -->
+                  <circle cx="200" cy="200" r="120" stroke="currentColor" stroke-opacity="0.06" stroke-dasharray="4 4"/>
+                  <circle cx="200" cy="200" r="170" stroke="currentColor" stroke-opacity="0.04" stroke-dasharray="4 4"/>
+                  
+                  <!-- Animated connection lines -->
+                  <line x1="200" y1="200" x2="200" y2="80" stroke="url(#hubGrad)" stroke-width="2" class="hub-line hub-line--1"/>
+                  <line x1="200" y1="200" x2="320" y2="200" stroke="url(#hubGrad)" stroke-width="2" class="hub-line hub-line--2"/>
+                  <line x1="200" y1="200" x2="200" y2="320" stroke="url(#hubGrad)" stroke-width="2" class="hub-line hub-line--3"/>
+                  <line x1="200" y1="200" x2="80" y2="200" stroke="url(#hubGrad)" stroke-width="2" class="hub-line hub-line--4"/>
+                  
+                  <defs>
+                    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#378add" stop-opacity="0.1"/>
+                      <stop offset="100%" stop-color="#378add" stop-opacity="0.6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
 
-              <p class="integrations-description">
+                <!-- Central Hub -->
+                <div class="hub-center">
+                  <span class="hub-logo">D</span>
+                </div>
+
+                <!-- Orbiting Nodes -->
+                <div class="hub-node hub-node--top">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <span>Patients</span>
+                </div>
+                <div class="hub-node hub-node--right">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Schedule</span>
+                </div>
+                <div class="hub-node hub-node--bottom">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                  <span>Records</span>
+                </div>
+                <div class="hub-node hub-node--left">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  <span>Billing</span>
+                </div>
+              </div>
+
+              <div class="alignment-features">
+                <div class="alignment-feature">
+                  <span class="feature-check"></span>
+                  <span>Patient records stay up to date</span>
+                </div>
+                <div class="alignment-feature">
+                  <span class="feature-check"></span>
+                  <span>Notes and tasks stay linked to the file</span>
+                </div>
+                <div class="alignment-feature">
+                  <span class="feature-check"></span>
+                  <span>Agenda and dossier update in real time</span>
+                </div>
+                <div class="alignment-feature">
+                  <span class="feature-check"></span>
+                  <span>Teams work from one shared operational state</span>
+                </div>
+              </div>
+
+              <p class="alignment-tagline-new">No checking. No chasing. No manual fixes.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTEGRATIONS SECTION - Premium Grid -->
+        <section class="integrations-new-section" id="integrations">
+          <div class="integrations-new-border" aria-hidden="true"></div>
+          
+          <div class="integrations-new-shell">
+            <div class="integrations-new-header" data-appear>
+              <span class="section-label">Integrations</span>
+              <h2 class="integrations-new-title">Works with the systems you already use</h2>
+              <p class="integrations-new-description">
                 No migration, no disruption, no duplicate work. Everything flows through one system.
               </p>
             </div>
 
-            <div class="integrations-grid" data-appear>
-              <div class="integration-card integration-card--connected">
-                <div class="integration-icon">Tw</div>
-                <div class="integration-info">
+            <div class="integrations-new-grid" data-appear>
+              <div class="integration-new-card">
+                <div class="integration-new-icon">Tw</div>
+                <div class="integration-new-info">
                   <strong>Twinfield</strong>
                   <span>Accounting</span>
                 </div>
-                <span class="integration-status">Connected</span>
+                <span class="integration-new-status">Connected</span>
               </div>
-              <div class="integration-card integration-card--connected">
-                <div class="integration-icon integration-icon--teal">Zm</div>
-                <div class="integration-info">
+              <div class="integration-new-card">
+                <div class="integration-new-icon integration-new-icon--teal">Zm</div>
+                <div class="integration-new-info">
                   <strong>ZorgMail</strong>
                   <span>Secure messaging</span>
                 </div>
-                <span class="integration-status">Connected</span>
+                <span class="integration-new-status">Connected</span>
               </div>
-              <div class="integration-card integration-card--connected">
-                <div class="integration-icon integration-icon--amber">Ve</div>
-                <div class="integration-info">
+              <div class="integration-new-card">
+                <div class="integration-new-icon integration-new-icon--amber">Ve</div>
+                <div class="integration-new-info">
                   <strong>VECOZO</strong>
                   <span>Insurance declarations</span>
                 </div>
-                <span class="integration-status">Connected</span>
+                <span class="integration-new-status">Connected</span>
               </div>
-              <div class="integration-card integration-card--connected">
-                <div class="integration-icon integration-icon--green">Im</div>
-                <div class="integration-info">
+              <div class="integration-new-card">
+                <div class="integration-new-icon integration-new-icon--green">Im</div>
+                <div class="integration-new-info">
                   <strong>Infomedics</strong>
                   <span>Patient invoicing</span>
                 </div>
-                <span class="integration-status">Connected</span>
+                <span class="integration-new-status">Connected</span>
               </div>
-              <div class="integration-card integration-card--connected">
-                <div class="integration-icon integration-icon--violet">Ex</div>
-                <div class="integration-info">
+              <div class="integration-new-card">
+                <div class="integration-new-icon integration-new-icon--violet">Ex</div>
+                <div class="integration-new-info">
                   <strong>Exact Online</strong>
                   <span>Bookkeeping</span>
                 </div>
-                <span class="integration-status">Connected</span>
+                <span class="integration-new-status">Connected</span>
               </div>
-              <div class="integration-card integration-card--more">
-                <div class="integration-icon integration-icon--plus">+</div>
-                <div class="integration-info">
-                  <strong>More integrations coming</strong>
+              <div class="integration-new-card integration-new-card--ghost">
+                <div class="integration-new-icon integration-new-icon--ghost">+</div>
+                <div class="integration-new-info">
+                  <strong>More coming</strong>
                   <span>Request yours</span>
                 </div>
               </div>
             </div>
 
-            <div class="integrations-features" data-appear>
-              <div class="int-feature">
+            <div class="integrations-principles" data-appear>
+              <div class="principle-card">
                 <h4>One system. One source of truth.</h4>
                 <p>DentalOS maintains a single, canonical model of your practice - patients, treatments, scheduling, and billing all live in one place.</p>
               </div>
-              <div class="int-feature">
+              <div class="principle-card">
                 <h4>Flexible by design</h4>
                 <p>Activate, extend, or replace any part of your workflow through integrations and plugins - without breaking the system.</p>
               </div>
@@ -629,89 +612,21 @@
           </div>
         </section>
 
-        <!-- PRICING SECTION -->
-        <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
-          <div class="pricing-art" aria-hidden="true"></div>
-          <div class="pricing-shell">
-            <div class="pricing-header" data-appear>
-              <div class="eyebrow-pill eyebrow-pill--center">
-                <span class="eyebrow-pill__icon" aria-hidden="true"></span>
-                <span>Pricing</span>
-              </div>
-
-              <h2 class="pricing-title" id="pricing-title">
-                Start small.<br />Scale without friction.
-              </h2>
-
-              <p class="pricing-description">
-                DentalOS grows with your practice - from a single room to multiple locations, 
-                pricing that stays fair at every stage.
-              </p>
-            </div>
-
-            <div class="pricing-card" data-appear>
-              <div class="pricing-card__content">
-                <ul class="pricing-features">
-                  <li>
-                    <span class="check-icon"></span>
-                    One location to start
-                  </li>
-                  <li>
-                    <span class="check-icon"></span>
-                    Fully set up, ready on day one
-                  </li>
-                  <li>
-                    <span class="check-icon"></span>
-                    Unlimited team members
-                  </li>
-                  <li>
-                    <span class="check-icon"></span>
-                    No per-user fees, ever
-                  </li>
-                  <li>
-                    <span class="check-icon"></span>
-                    Core workflows included
-                  </li>
-                  <li>
-                    <span class="check-icon"></span>
-                    Scales with your capacity
-                  </li>
-                </ul>
-                <div class="pricing-cta">
-                  <a class="primary-cta primary-cta--hero" href="#demo">
-                    <span>Talk to us about pricing</span>
-                    <span>Talk to us about pricing</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <!-- TESTIMONIALS SECTION -->
-        <section class="testimonials-section" id="customers" aria-labelledby="testimonials-title">
-          <div class="testimonials-shell">
-            <div class="testimonials-header" data-appear>
-              <div class="eyebrow-pill eyebrow-pill--center">
-                <span class="eyebrow-pill__icon" aria-hidden="true"></span>
-                <span>Customer stories</span>
-              </div>
-
-              <h2 class="testimonials-title" id="testimonials-title">
-                Real practices. Real results.
-              </h2>
-
-              <p class="testimonials-description">
-                Here's what dental teams say after switching to DentalOS.
-              </p>
+        <section class="testimonials-new-section" id="customers">
+          <div class="testimonials-new-shell">
+            <div class="testimonials-new-header" data-appear>
+              <span class="section-label">Customer Stories</span>
+              <h2 class="testimonials-new-title">Real practices. Real results.</h2>
             </div>
 
-            <div class="testimonials-grid" data-appear>
-              <article class="testimonial-card">
+            <div class="testimonials-new-grid" data-appear>
+              <article class="testimonial-new-card">
+                <div class="testimonial-quote-mark">"</div>
                 <blockquote>
-                  "DentalOS completely changed how we manage our schedule. Appointment gaps went from 15% to nearly zero in the first month - the AI filling in cancellations automatically has been a game changer."
+                  DentalOS completely changed how we manage our schedule. Appointment gaps went from 15% to nearly zero in the first month - the AI filling in cancellations automatically has been a game changer.
                 </blockquote>
-                <div class="testimonial-author">
+                <div class="testimonial-new-author">
                   <img src="./images/droxy-ai/Pp0V82v2jiZAOyulnuAEsCmv8.png" alt="Dr. Sarah Mitchell" />
                   <div>
                     <strong>Dr. Sarah Mitchell</strong>
@@ -720,11 +635,12 @@
                 </div>
               </article>
 
-              <article class="testimonial-card">
+              <article class="testimonial-new-card">
+                <div class="testimonial-quote-mark">"</div>
                 <blockquote>
-                  "The consultation capture feature saves our team at least 40 minutes a day. Notes auto-generate after every appointment and link straight to the patient's chart."
+                  The consultation capture feature saves our team at least 40 minutes a day. Notes auto-generate after every appointment and link straight to the patient's chart.
                 </blockquote>
-                <div class="testimonial-author">
+                <div class="testimonial-new-author">
                   <img src="./images/droxy-ai/czuyHhAeU75b3z4IY1npDJyXlRg.png" alt="James Kwon" />
                   <div>
                     <strong>James Kwon</strong>
@@ -733,11 +649,12 @@
                 </div>
               </article>
 
-              <article class="testimonial-card">
+              <article class="testimonial-new-card">
+                <div class="testimonial-quote-mark">"</div>
                 <blockquote>
-                  "Billing used to be our biggest headache. Now DentalOS processes claims automatically and chases outstanding invoices without anyone on our team having to think about it. Revenue is up 22%."
+                  Billing used to be our biggest headache. Now DentalOS processes claims automatically and chases outstanding invoices. Revenue is up 22% since we switched.
                 </blockquote>
-                <div class="testimonial-author">
+                <div class="testimonial-new-author">
                   <img src="./images/droxy-ai/TVyaTL93duwHQvHvsOuNzL2ck.png" alt="Dr. Fatima Al-Rashid" />
                   <div>
                     <strong>Dr. Fatima Al-Rashid</strong>
@@ -749,62 +666,109 @@
           </div>
         </section>
 
-        <!-- FAQ SECTION -->
-        <section class="faq-section" id="support" aria-labelledby="faq-title">
-          <div class="faq-shell">
-            <div class="faq-header" data-appear>
-              <div class="eyebrow-pill eyebrow-pill--center">
-                <span class="eyebrow-pill__icon" aria-hidden="true"></span>
-                <span>Support</span>
+        <!-- PRICING SECTION -->
+        <section class="pricing-new-section" id="pricing">
+          <div class="pricing-new-shell">
+            <div class="pricing-new-content" data-appear>
+              <div class="pricing-new-copy">
+                <span class="section-label">Pricing</span>
+                <h2 class="pricing-new-title">Start small.<br/>Scale without friction.</h2>
+                <p class="pricing-new-description">
+                  DentalOS grows with your practice - from a single room to multiple locations, 
+                  pricing that stays fair at every stage.
+                </p>
+                <a class="primary-cta primary-cta--hero" href="#demo">
+                  <span>Talk to us about pricing</span>
+                  <span>Talk to us about pricing</span>
+                </a>
               </div>
+              
+              <div class="pricing-new-features">
+                <div class="pricing-feature-row">
+                  <span class="pricing-check"></span>
+                  <span>One location to start</span>
+                </div>
+                <div class="pricing-feature-row">
+                  <span class="pricing-check"></span>
+                  <span>Fully set up, ready on day one</span>
+                </div>
+                <div class="pricing-feature-row">
+                  <span class="pricing-check"></span>
+                  <span>Unlimited team members</span>
+                </div>
+                <div class="pricing-feature-row">
+                  <span class="pricing-check"></span>
+                  <span>No per-user fees, ever</span>
+                </div>
+                <div class="pricing-feature-row">
+                  <span class="pricing-check"></span>
+                  <span>Core workflows included</span>
+                </div>
+                <div class="pricing-feature-row">
+                  <span class="pricing-check"></span>
+                  <span>Scales with your capacity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-              <h2 class="faq-title" id="faq-title">Frequently Asked Questions</h2>
-              <p class="faq-description">Everything you need to know about running your practice with DentalOS.</p>
+        <!-- FAQ SECTION -->
+        <section class="faq-new-section" id="support">
+          <div class="faq-new-shell">
+            <div class="faq-new-header" data-appear>
+              <span class="section-label">Support</span>
+              <h2 class="faq-new-title">Frequently Asked Questions</h2>
             </div>
 
-            <div class="faq-grid" data-appear>
-              <details class="faq-item">
+            <div class="faq-new-grid" data-appear>
+              <details class="faq-new-item">
                 <summary>
-                  <span class="faq-number">01</span>
-                  <span class="faq-question">How quickly can we get started?</span>
+                  <span class="faq-new-number">01</span>
+                  <span class="faq-new-question">How quickly can we get started?</span>
+                  <span class="faq-new-icon"></span>
                 </summary>
                 <p>Most practices are live within one working day. We handle setup, data import, and configuration.</p>
               </details>
 
-              <details class="faq-item">
+              <details class="faq-new-item">
                 <summary>
-                  <span class="faq-number">02</span>
-                  <span class="faq-question">Does it work with our current systems?</span>
+                  <span class="faq-new-number">02</span>
+                  <span class="faq-new-question">Does it work with our current systems?</span>
+                  <span class="faq-new-icon"></span>
                 </summary>
                 <p>Yes, DentalOS is built to integrate with your existing accounting, messaging, and insurance systems.</p>
               </details>
 
-              <details class="faq-item">
+              <details class="faq-new-item">
                 <summary>
-                  <span class="faq-number">03</span>
-                  <span class="faq-question">Is patient data secure?</span>
+                  <span class="faq-new-number">03</span>
+                  <span class="faq-new-question">Is patient data secure?</span>
+                  <span class="faq-new-icon"></span>
                 </summary>
                 <p>Patient data is encrypted in transit and at rest, access can be scoped by role, and workflow activity is logged for traceability.</p>
               </details>
 
-              <details class="faq-item">
+              <details class="faq-new-item">
                 <summary>
-                  <span class="faq-number">04</span>
-                  <span class="faq-question">How is access managed?</span>
+                  <span class="faq-new-number">04</span>
+                  <span class="faq-new-question">How is access managed?</span>
+                  <span class="faq-new-icon"></span>
                 </summary>
                 <p>Practices can define role-based access and keep a clear audit trail across clinical and operational workflows.</p>
               </details>
 
-              <details class="faq-item">
+              <details class="faq-new-item">
                 <summary>
-                  <span class="faq-number">05</span>
-                  <span class="faq-question">What if we need support?</span>
+                  <span class="faq-new-number">05</span>
+                  <span class="faq-new-question">What if we need support?</span>
+                  <span class="faq-new-icon"></span>
                 </summary>
                 <p>Our dedicated support team is available via chat and phone to help you with any questions or issues.</p>
               </details>
             </div>
 
-            <div class="faq-cta" data-appear>
+            <div class="faq-new-cta" data-appear>
               <p>Still have questions?</p>
               <span>Our team usually replies within a few hours on business days.</span>
               <a class="secondary-cta" href="#contact">Contact us</a>
@@ -813,10 +777,10 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="site-footer">
-          <div class="footer-shell">
-            <div class="footer-main">
-              <div class="footer-brand">
+        <footer class="site-footer-new">
+          <div class="footer-new-shell">
+            <div class="footer-new-main">
+              <div class="footer-new-brand">
                 <a class="brand" href="#" aria-label="DentalOS">
                   <span class="brand-badge">D</span>
                   <span class="brand-text">DentalOS</span>
@@ -824,15 +788,15 @@
                 <p>The autonomous practice OS for modern dental teams. Automate scheduling, documentation, communication, and billing - across every room and location.</p>
               </div>
 
-              <div class="footer-links">
-                <div class="footer-col">
+              <div class="footer-new-links">
+                <div class="footer-new-col">
                   <h4>Product</h4>
                   <a href="#solutions">Solutions</a>
                   <a href="#integrations">Integrations</a>
                   <a href="#pricing">Pricing</a>
                   <a href="#security">Security</a>
                 </div>
-                <div class="footer-col">
+                <div class="footer-new-col">
                   <h4>Company</h4>
                   <a href="#about">About</a>
                   <a href="#customers">Customers</a>
@@ -842,9 +806,9 @@
               </div>
             </div>
 
-            <div class="footer-bottom">
+            <div class="footer-new-bottom">
               <span>&copy; 2026 DentalOS B.V. All rights reserved.</span>
-              <div class="footer-legal">
+              <div class="footer-new-legal">
                 <a href="#privacy">Privacy Policy</a>
                 <a href="#terms">Terms of Service</a>
                 <a href="#security">Security</a>
