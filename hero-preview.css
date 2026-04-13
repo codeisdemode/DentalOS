@@ -3113,18 +3113,23 @@ button {
    PREMIUM SECTIONS - CONNECTOR, ACCORDION, etc.
    =========================================== */
 
-/* SECTION LABEL */
+/* SECTION LABEL — matches .eyebrow-pill from hero */
 .section-label {
-  display: inline-block;
-  padding: 6px 14px;
-  border: 1px solid rgba(200, 219, 234, 0.6);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  min-height: 36px;
+  padding: 7px 16px;
+  border: 1px solid rgba(236, 239, 241, 1);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.8);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #378add;
-  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
 .text-muted {
@@ -3137,7 +3142,7 @@ button {
 .connector-section {
   position: relative;
   padding: 80px 0 96px;
-  background: #fff;
+  background: var(--bg);
   overflow: hidden;
 }
 
@@ -3147,7 +3152,7 @@ button {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(200, 219, 234, 0.3);
+  background: var(--line);
   pointer-events: none;
 }
 
@@ -3174,10 +3179,10 @@ button {
 .connector-title {
   margin: 0 0 20px;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-size: clamp(2.25rem, 3.5vw, 3.5rem);
+  font-size: clamp(3rem, 3.35vw, 4.5rem);
   font-weight: 600;
   letter-spacing: -0.04em;
-  line-height: 1.15;
+  line-height: 1.125;
 }
 
 .connector-description {
@@ -3192,9 +3197,10 @@ button {
   position: relative;
   min-height: 400px;
   padding: 40px;
-  border: 1px solid rgba(200, 219, 234, 0.4);
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(248, 250, 252, 0.8), rgba(255, 255, 255, 0.9));
+  border: 1px solid rgba(236, 239, 241, 0.92);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(219, 226, 231, 0.92);
 }
 
 .connector-panel__visual {
@@ -3233,9 +3239,9 @@ button {
   gap: 6px;
   padding: 16px 24px;
   background: #fff;
-  border: 1px solid rgba(200, 219, 234, 0.6);
+  border: 1px solid rgba(236, 239, 241, 0.92);
   border-radius: 16px;
-  box-shadow: 0 8px 32px -12px rgba(20, 49, 77, 0.15);
+  box-shadow: var(--shadow);
   z-index: 2;
 }
 
@@ -3302,7 +3308,9 @@ button {
 .capabilities-section {
   position: relative;
   padding: 96px 0;
-  background: #f6f7f8;
+  background: #fff;
+  border-top: 1px solid rgba(236, 239, 241, 0.92);
+  border-bottom: 1px solid rgba(236, 239, 241, 0.92);
 }
 
 .capabilities-border-x {
@@ -3310,8 +3318,8 @@ button {
   inset: 0;
   margin: 0 auto;
   max-width: min(100% - 112px, 1280px);
-  border-left: 1px solid rgba(200, 219, 234, 0.25);
-  border-right: 1px solid rgba(200, 219, 234, 0.25);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
   pointer-events: none;
 }
 
@@ -3330,10 +3338,10 @@ button {
 .capabilities-title {
   margin: 0 0 16px;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-size: clamp(2.25rem, 3.35vw, 3.5rem);
   font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  letter-spacing: -0.04em;
+  line-height: 1.125;
 }
 
 .capabilities-description {
@@ -3346,11 +3354,11 @@ button {
 
 /* Accordion */
 .capabilities-accordion {
-  border-top: 1px solid rgba(200, 219, 234, 0.4);
+  border-top: 1px solid var(--line);
 }
 
 .accordion-item {
-  border-bottom: 1px solid rgba(200, 219, 234, 0.4);
+  border-bottom: 1px solid var(--line);
 }
 
 .accordion-trigger {
@@ -3477,8 +3485,9 @@ button {
   max-width: 400px;
   padding: 16px;
   background: #fff;
-  border: 1px solid rgba(200, 219, 234, 0.5);
+  border: 1px solid rgba(236, 239, 241, 0.92);
   border-radius: 16px;
+  box-shadow: 0 1px 0 rgba(219, 226, 231, 0.92);
 }
 
 .schedule-row {
@@ -3550,8 +3559,8 @@ button {
 
 .clinical-demo__speech {
   padding: 16px;
-  background: #f5f6f8;
-  border: 1px solid rgba(200, 219, 234, 0.4);
+  background: var(--bg);
+  border: 1px solid rgba(236, 239, 241, 0.92);
   border-radius: 6px 16px 16px 16px;
 }
 
@@ -3593,8 +3602,9 @@ button {
   gap: 12px;
   padding: 14px;
   background: #fff;
-  border: 1px solid rgba(200, 219, 234, 0.5);
+  border: 1px solid rgba(236, 239, 241, 0.92);
   border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(219, 226, 231, 0.92);
 }
 
 .action-icon-wrapper {
@@ -3707,8 +3717,9 @@ button {
   gap: 6px;
   padding: 24px 32px;
   background: #fff;
-  border: 1px solid rgba(200, 219, 234, 0.5);
+  border: 1px solid rgba(236, 239, 241, 0.92);
   border-radius: 16px;
+  box-shadow: 0 1px 0 rgba(219, 226, 231, 0.92);
 }
 
 .billing-stat__value {
@@ -3774,8 +3785,8 @@ button {
 .livefeed-section {
   position: relative;
   padding: 96px 0;
-  background: #fff;
-  border-top: 1px solid rgba(200, 219, 234, 0.3);
+  background: var(--bg);
+  border-top: 1px solid rgba(236, 239, 241, 0.92);
 }
 
 .livefeed-shell {
@@ -3798,10 +3809,10 @@ button {
 .livefeed-title {
   margin: 0 0 16px;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.25rem, 3.35vw, 3.5rem);
   font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  letter-spacing: -0.04em;
+  line-height: 1.125;
 }
 
 .livefeed-description {
@@ -3842,9 +3853,10 @@ button {
   position: relative;
   max-height: 400px;
   overflow: hidden;
-  border: 1px solid rgba(200, 219, 234, 0.4);
-  border-radius: 20px;
-  background: rgba(248, 250, 252, 0.5);
+  border: 1px solid rgba(236, 239, 241, 0.92);
+  border-radius: 16px;
+  background: var(--bg);
+  box-shadow: 0 1px 0 rgba(219, 226, 231, 0.92);
 }
 
 .livefeed-mask {
@@ -3853,7 +3865,7 @@ button {
   left: 0;
   right: 0;
   height: 80px;
-  background: linear-gradient(180deg, transparent, rgba(248, 250, 252, 0.95));
+  background: linear-gradient(180deg, transparent, var(--bg) 95%);
   pointer-events: none;
   z-index: 1;
 }
@@ -3863,7 +3875,7 @@ button {
   flex-direction: column;
   gap: 1px;
   padding: 8px;
-  background: rgba(200, 219, 234, 0.2);
+  background: var(--line);
 }
 
 .feed-entry {
